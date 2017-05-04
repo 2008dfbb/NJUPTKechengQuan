@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
 //            case R.id.home:
 //                Toast.makeText(this,"You click Home",Toast.LENGTH_SHORT).show();
 //                break;
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                break;
             case R.id.settings:
                 Toast.makeText(this,"You click Settings",Toast.LENGTH_SHORT).show();
                 break;
