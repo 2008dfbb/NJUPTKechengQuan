@@ -3,19 +3,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_personal"
-            android:icon="@drawable/ic_settings"
+            android:icon="@drawable/ic_personal"
             android:title="个人信息"/>
         <item
-            android:id="@+id/nav_call"
-            android:icon="@drawable/ic_settings"
-            android:title="Call"/>
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_login"
+            android:title="Login"/>
+        <item
+            android:id="@+id/nav_bbs"
+            android:icon="@drawable/ic_bbs"
+            android:title="BBS"/>
         <item
             android:id="@+id/nav_searchCourse"
-            android:icon="@drawable/ic_settings"
+            android:icon="@drawable/ic_searchcourse"
             android:title="查询课程"/>
         <item
-            android:id="@+id/nav_mail"
-            android:icon="@drawable/ic_settings"
-            android:title="mail"/>
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/ic_weather"
+            android:title="Weather"/>
     </group>
 </menu>
