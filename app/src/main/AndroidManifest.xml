@@ -14,10 +14,19 @@
             android:label="南邮课程圈"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WeatherActivity"
+            android:label="This is 4th">
+            <intent-filter>
+                <action android:name="com.intent.action.WEATHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

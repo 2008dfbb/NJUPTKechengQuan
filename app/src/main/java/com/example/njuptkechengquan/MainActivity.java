@@ -1,5 +1,6 @@
 package com.example.njuptkechengquan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -14,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private DrawerLayout mDrawerLayout;
     @Override
@@ -34,7 +35,21 @@ public class MainActivity extends AppCompatActivity {
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
             @Override
             public boolean onNavigationItemSelected(MenuItem item){
-                mDrawerLayout.closeDrawers();
+                int id = item.getItemId();
+                if(id == R.id.nav_personal){
+                    mDrawerLayout.closeDrawers();
+                }else if(id == R.id.nav_login){
+                    mDrawerLayout.closeDrawers();
+                }else if(id == R.id.nav_bbs){
+                    mDrawerLayout.closeDrawers();
+                }else if(id == R.id.nav_searchCourse){
+                    mDrawerLayout.closeDrawers();
+                }else if(id == R.id.nav_weather){
+                    Intent intent = new Intent("com.intent.action.WEATHER");
+                    startActivity(intent);
+                    mDrawerLayout.closeDrawers();
+                }
+
                 return true;
             }
         });
