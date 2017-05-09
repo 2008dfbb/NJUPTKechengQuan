@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.njuptkechengquan">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,12 +23,22 @@
         </activity>
         <activity
             android:name=".WeatherActivity"
-            android:label="This is 4th">
+            android:label="本地天气">
             <intent-filter>
                 <action android:name="com.intent.action.WEATHER" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CourseActivity"
+            android:label="课程表">
+            <intent-filter>
+                <action android:name="com.intent.action.COURSE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>>
+        </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>

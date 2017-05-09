@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity{
                 }else if(id == R.id.nav_bbs){
                     mDrawerLayout.closeDrawers();
                 }else if(id == R.id.nav_searchCourse){
+                    Intent intent = new Intent("com.intent.action.COURSE");
+                    startActivity(intent);
                     mDrawerLayout.closeDrawers();
                 }else if(id == R.id.nav_weather){
                     Intent intent = new Intent("com.intent.action.WEATHER");
