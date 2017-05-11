@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="designed by 2008dfbb in NJUPT software internship"
+        android:text="Build version:0.7.12"
         android:textColor="#fff"
         android:textSize="14sp"
         />
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/softwareinfo"
-        android:text="未来在这里写出该人id"
+        android:text="南邮课程圈"
         android:textColor="#fff"
         android:textSize="14sp"
         />

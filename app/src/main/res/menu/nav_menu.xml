@@ -6,12 +6,12 @@
             android:icon="@drawable/ic_calender"
             android:title="日历"/>
         <item
-            android:id="@+id/nav_personal"
-            android:icon="@drawable/ic_personal"
-            android:title="登陆"/>
-        <item
             android:id="@+id/nav_login"
             android:icon="@drawable/ic_login"
+            android:title="登陆"/>
+        <item
+            android:id="@+id/nav_regist"
+            android:icon="@drawable/ic_regist"
             android:title="注册"/>
         <item
             android:id="@+id/nav_bbs"

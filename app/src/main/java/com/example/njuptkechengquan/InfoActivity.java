@@ -1,31 +1,23 @@
 package com.example.njuptkechengquan;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.GeolocationPermissions;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
 import android.widget.Toast;
-import java.util.Date;
-import java.util.Locale;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
-public class WeatherActivity extends AppCompatActivity {
+public class InfoActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -37,8 +29,7 @@ public class WeatherActivity extends AppCompatActivity {
                 Toast.makeText(this,"开发中",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.swinfo:
-                Intent intent = new Intent("com.intent.action.INFO");
-                startActivity(intent);
+                Toast.makeText(this,"您已经在该页了！",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.share:
                 screenshot();
@@ -56,7 +47,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather);
+        setContentView(R.layout.activity_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -64,51 +55,6 @@ public class WeatherActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_back);
         }
-        WebView mWebView1 = (WebView) findViewById(R.id.myWebView1);
-        WebSettings webSettings = mWebView1.getSettings();
-        //webview支持js脚本
-        webSettings.setJavaScriptEnabled(true);
-        //启用地理定位
-        webSettings.setGeolocationEnabled(true);
-        //开启DomStorage缓存
-        webSettings.setDomStorageEnabled(true);
-        //配置权限
-
-        mWebView1.setWebChromeClient(new WebChromeClient() {
-
-            @Override
-
-            public void onReceivedIcon(WebView view, Bitmap icon) {
-
-                super.onReceivedIcon(view, icon);
-
-            }
-
-
-
-
-
-            @Override
-
-            public void onGeolocationPermissionsShowPrompt(String origin,GeolocationPermissions.Callback callback) {
-
-                callback.invoke(origin, true, false);
-
-                super.onGeolocationPermissionsShowPrompt(origin, callback);
-
-            }
-
-        });
-        mWebView1.loadUrl("http://m.weather.com.cn");
-        mWebView1.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                // TODO Auto-generated method stub
-                //返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
-                view.loadUrl(url);
-                return true;
-            }
-        });
     }
     private void screenshot()
     {
@@ -123,7 +69,7 @@ public class WeatherActivity extends AppCompatActivity {
                 // 获取内置SD卡路径
                 String sdCardPath = Environment.getExternalStorageDirectory().getPath();
                 // 图片文件路径
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss",Locale.US);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss", Locale.US);
                 String fname = sdf.format(new Date()) + ".png";
                 String filePath = sdCardPath + File.separator + fname;
                 File file = new File(filePath);
