@@ -1,6 +1,7 @@
 package com.example.njuptkechengquan;
 
 import android.content.Intent;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -31,12 +34,14 @@ public class MainActivity extends AppCompatActivity{
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
-        navView.setCheckedItem(R.id.nav_personal);
+        navView.setCheckedItem(R.id.nav_calender);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
             @Override
             public boolean onNavigationItemSelected(MenuItem item){
                 int id = item.getItemId();
-                if(id == R.id.nav_personal){
+                if(id == R.id.nav_calender){
+                    mDrawerLayout.closeDrawers();
+                }else if(id == R.id.nav_personal){
                     mDrawerLayout.closeDrawers();
                 }else if(id == R.id.nav_login){
                     mDrawerLayout.closeDrawers();

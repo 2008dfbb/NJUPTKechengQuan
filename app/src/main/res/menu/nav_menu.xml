@@ -2,13 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_calender"
+            android:icon="@drawable/ic_calender"
+            android:title="日历"/>
+        <item
             android:id="@+id/nav_personal"
             android:icon="@drawable/ic_personal"
-            android:title="个人信息"/>
+            android:title="登陆"/>
         <item
             android:id="@+id/nav_login"
             android:icon="@drawable/ic_login"
-            android:title="Login"/>
+            android:title="注册"/>
         <item
             android:id="@+id/nav_bbs"
             android:icon="@drawable/ic_bbs"
