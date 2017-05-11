@@ -128,7 +128,7 @@ public class BbsActivity extends ListActivity {
 //                // 获取内置SD卡路径
 //                String sdCardPath = Environment.getExternalStorageDirectory().getPath();
 //                // 图片文件路径
-//                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss",Locale.US);
+//                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss",Locale.CHINA);
 //                String fname = sdf.format(new Date()) + ".png";
 //                String filePath = sdCardPath + File.separator + fname;
 //                File file = new File(filePath);

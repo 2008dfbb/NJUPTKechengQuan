@@ -106,7 +106,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:text="Build version:0.7.12"/>
+            android:text="Build version:0.7.13"/>
 
         <TextView
             android:id="@+id/textView3"
