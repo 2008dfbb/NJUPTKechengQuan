@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity{
                 }else if(id == R.id.nav_login){
                     mDrawerLayout.closeDrawers();
                 }else if(id == R.id.nav_bbs){
+                    Intent intent = new Intent("com.intent.action.BBS");
+                    startActivity(intent);
                     mDrawerLayout.closeDrawers();
                 }else if(id == R.id.nav_searchCourse){
                     Intent intent = new Intent("com.intent.action.COURSE");
