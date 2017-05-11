@@ -12,9 +12,9 @@
         android:title="Settings"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/delete"
-        android:icon="@drawable/ic_delete"
-        android:title="Delete"
+        android:id="@+id/swinfo"
+        android:icon="@drawable/ic_info"
+        android:title="SofrwareInfo"
         app:showAsAction="always"/>
     <item
         android:id="@+id/share"

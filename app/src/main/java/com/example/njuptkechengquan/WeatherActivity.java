@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.GeolocationPermissions;
@@ -16,6 +17,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -25,8 +27,22 @@ public class WeatherActivity extends AppCompatActivity {
             case android.R.id.home:
                 finish();
                 break;
+            case R.id.settings:
+                Toast.makeText(this,"You click Settings",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.swinfo:
+                Toast.makeText(this,"You click swinfo",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.share:
+                Toast.makeText(this,"You click Share",Toast.LENGTH_SHORT).show();
+                break;
             default:
         }
+        return true;
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar,menu);
         return true;
     }
 

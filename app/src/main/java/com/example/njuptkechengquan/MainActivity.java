@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity{
             case R.id.settings:
                 Toast.makeText(this,"You click Settings",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.delete:
-                Toast.makeText(this,"You click Delete",Toast.LENGTH_SHORT).show();
+            case R.id.swinfo:
+                Toast.makeText(this,"You click swinfo",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.share:
                 Toast.makeText(this,"You click Share",Toast.LENGTH_SHORT).show();
