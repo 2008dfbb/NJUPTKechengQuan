@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        tools:context=".InfoActivity"
         android:theme="@style/AppTheme.AppBarOverlay">
 
 
@@ -103,18 +104,25 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Build version:0.7.15"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#000000"
-            android:textSize="24sp"
-            android:text="Build version:0.7.14"/>
+            android:textSize="21sp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="designed during NJUPT software-design internship "
             android:textColor="#000000"
-            android:textSize="14sp"
-            android:text="designed during NJUPT software-design internship " />
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_git"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact me on Github"
+            android:textColor="#FFFFFF" />
 
 
     </LinearLayout>

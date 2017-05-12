@@ -28,7 +28,7 @@ public class Db extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE bbs(" +
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "theme TEXT DEFAULT \"\"," +
-                "reply TEXT DEFAULT \"\"," +
+                "like INTEGER DEFAULT (0)," +
                 "content TEXT DEFAULT \"\")");
     }
 

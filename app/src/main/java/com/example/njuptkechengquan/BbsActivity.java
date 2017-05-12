@@ -56,7 +56,6 @@ public class BbsActivity extends ListActivity {
             dbWrite.insert("bbs",null,cv);
 
             refreshListView();
-
         }
     };
 
@@ -89,6 +88,33 @@ public class BbsActivity extends ListActivity {
         }
     };
 
+    private AdapterView.OnItemClickListener ListViewItemClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        //点赞
+        public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+
+            new AlertDialog.Builder(BbsActivity.this).setTitle("提醒").setMessage("为他点赞？").setNegativeButton("取消",null).setPositiveButton("确定",new DialogInterface.OnClickListener(){
+
+                @Override
+                public void onClick(DialogInterface dialog,int which){
+                    Cursor c = adapter.getCursor();
+                    c.moveToPosition(position);
+
+                    int itemId = c.getInt(c.getColumnIndex("_id"));
+
+                    ContentValues cv = new ContentValues();
+                    int _like ;
+                    _like = cv.getAsInteger("like");
+                    _like += 1;
+                    cv.put("like",_like);
+                    dbWrite.insert("bbs","_id=?",cv);
+
+                    refreshListView();
+                }
+            }).show();
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +133,7 @@ public class BbsActivity extends ListActivity {
         dbRead = db.getReadableDatabase();
         dbWrite = db.getWritableDatabase();
 
-        adapter = new SimpleCursorAdapter(this, R.layout.user_list_cell, null, new String[]{"theme", "content"}, new int[]{R.id.tvTheme,R.id.tvContent});
+        adapter = new SimpleCursorAdapter(this, R.layout.user_list_cell, null, new String[]{"theme", "content","like"}, new int[]{R.id.tvTheme,R.id.tvContent,R.id.tvLike});
         setListAdapter(adapter);
 
         refreshListView();
