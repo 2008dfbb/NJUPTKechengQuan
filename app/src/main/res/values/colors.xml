@@ -7,4 +7,5 @@
     <color name="courseTextColor" >#ECECEC</color>
     <color name="actionBarBg">#6666CC</color>
     <color name="actionBarText">#EDEDED</color>
+    <color name="mcv_text_date_dark">#000000</color>
 </resources>

@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Build version:0.7.15"
+        android:text="Build version:0.7.16"
         android:textColor="#fff"
         android:textSize="14sp"
         />
